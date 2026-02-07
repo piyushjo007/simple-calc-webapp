@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.11-slim as build
 
 RUN useradd -m appuser
 WORKDIR /app

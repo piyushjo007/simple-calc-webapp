@@ -24,5 +24,6 @@ jobs:
     - name: Build and Push Docker image 
       run: |
         TAG=${{ github.run_number }}
-        docker build . --file Dockerfile --tag simple-calc-webapp:V_0.$TAG
-        docker push joship4/simple-calc-webapp:V_0.$TAG
+        IMAGE=${{ secrets.DOCKER_USERNAME }}/simple-calc-webapp
+        docker build . --file Dockerfile --tag $IMAGE:V_0.$TAG
+        docker push $IMAGE:V_0.$TAG

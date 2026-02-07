@@ -25,4 +25,4 @@ jobs:
       run: |
         TAG=${{ github.run_number }}
         docker build . --file Dockerfile --tag simple-calc-webapp:V_0.$TAG
-        docker push simple-calc-webapp:V_0.$TAG
+        docker push joship4/simple-calc-webapp:V_0.$TAG

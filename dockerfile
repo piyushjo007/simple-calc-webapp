@@ -11,7 +11,8 @@ COPY . .
 RUN chown -R appuser:appuser /app
 USER appuser
 
-RUN pytest tests/
+# RUN pytest tests/
+RUN PYTHONPATH=. pytest -v
 # Stage 2: Production image
 
 FROM python:3.11-slim
